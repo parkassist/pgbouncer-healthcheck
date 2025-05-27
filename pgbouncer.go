@@ -9,7 +9,13 @@ import (
 // User as returned by PGBouncer's SHOW USERS
 type User struct {
 	Name     string
+	PoolSize int
+	ReservePoolSize *int
 	PoolMode *string
+	MaxUserConnections int
+	CurrentConnections int
+	MaxUserClientConnections int
+	CurrentClientConnections int
 }
 
 // Config item as returned by PGBouncer's SHOW CONFIG
